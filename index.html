@@ -2,101 +2,60 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Chocolate Day – For Rashiii 🤎</title>
+<title>For Rashiii 🤍</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
 body{
+  margin:0;
   min-height:100vh;
-  background:linear-gradient(135deg,#3b170c,#120703);
   display:flex;
   justify-content:center;
   align-items:center;
-  color:#f4e7df;
-  font-family:'Montserrat',sans-serif;
+  background:#2b120a;
+  font-family:Arial, sans-serif;
+  color:white;
 }
-
-.container{
-  width:100%;
-  max-width:420px;
-  padding:46px 26px;
+.card{
   text-align:center;
-  animation:fade 1.2s ease;
+  max-width:360px;
+  padding:25px;
 }
-
-@keyframes fade{
-  from{opacity:0;transform:translateY(30px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-h1{
-  font-family:'Playfair Display',serif;
-  font-size:42px;
-  margin-bottom:14px;
-}
-
-p{
+button{
+  margin-top:20px;
+  padding:12px 30px;
+  border:none;
+  border-radius:25px;
+  background:#fff;
+  color:#2b120a;
   font-size:16px;
-  line-height:1.9;
-  opacity:.9;
-}
-
-.divider{
-  width:70px;
-  height:2px;
-  background:linear-gradient(to right,transparent,#c7a07a,transparent);
-  margin:26px auto;
-}
-
-.player{
-  margin-top:40px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,215,180,.35);
-  border-radius:18px;
-  padding:14px;
-  backdrop-filter:blur(10px);
-}
-
-footer{
-  margin-top:30px;
-  font-size:14px;
-  opacity:.85;
+  cursor:pointer;
 }
 </style>
 </head>
 
 <body>
+  <div class="card">
+    <h1>For You 🤎</h1>
+    <p>
+      Happy Chocolate Day<br>
+      <b>Rashiii</b>
+    </p>
 
-<div class="container">
-  <h1>For You 🤎</h1>
-  <div class="divider"></div>
-
-  <p>
-    You are my quiet addiction.<br><br>
-    Jaise chocolate sirf taste nahi hoti,<br>
-    ek comfort hoti hai,<br>
-    waise hi tum meri zindagi ka woh hissa ho<br>
-    jahan sab kuch aake theher jaata hai.
-  </p>
-
-  <footer>
-    <br>
-    Happy Chocolate Day,<br>
-    <strong>Rashiii 🤍</strong>
-  </footer>
-
-  <!-- 🎵 GUARANTEED MUSIC -->
-  <div class="player">
-    <audio controls preload="auto" style="width:100%;">
-      <source src="https://raw.githubusercontent.com/adixportal/Chocolate-day/main/midnight-call-remixboothin_5dhsRfbU.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
+    <!-- AUDIO -->
+    <audio id="song">
+      <source src="midnight-call-remixboothin_5dhsRfbU.mp3" type="audio/mpeg">
     </audio>
+
+    <button onclick="playSong()">▶ Play Song</button>
   </div>
-</div>
+
+<script>
+function playSong(){
+  const audio = document.getElementById("song");
+  audio.play();
+}
+</script>
 
 </body>
 </html>
